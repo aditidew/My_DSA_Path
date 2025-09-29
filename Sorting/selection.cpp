@@ -5,7 +5,7 @@ vector<int> selection(vector<int> &arr){
     int n= arr.size();
     for(int i=0; i<=n-1; i++){
         int min= i;
-        for(int j=0; j<=n-1; j++){
+        for(int j=i; j<=n-1; j++){
             if(arr[j] < arr[min]){
                 min =j;
             }
@@ -22,9 +22,10 @@ vector<int> selection(vector<int> &arr){
 
 int main(){
 int n;
-
+cout<< "Enter the number of Elements ";
 cin >> n;
 vector<int> arr(n);
+cout<<"Enter the Elements ";
 for(int i=0; i<n; i++){
     cin >> arr[i];
 }
